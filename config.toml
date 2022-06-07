@@ -1,0 +1,14 @@
+baseURL = "https://genesys-samples.github.io/"
+languageCode = "en-us"
+title = "Genesys Experience as a Service"
+theme = "modernize"
+metaDataFormat = "yaml"
+relativeURLs = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "RSS"]
