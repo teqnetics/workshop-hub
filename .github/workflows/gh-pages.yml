@@ -35,5 +35,5 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob delete-batch --account-name 'genesysworkshops' --source '$web' --pattern '/*'
+            az storage blob delete-batch --account-name 'genesysworkshops' --source '$web' --pattern '*'
             az storage blob upload-batch --account-name 'genesysworkshops' --source ./public --destination '$web'
