@@ -1,4 +1,4 @@
-baseURL = "https://workshop.demo.genesys.com/workshops/"
+baseURL = "https://workshop.demo.genesys.com/"
 languageCode = "en-us"
 title = "Genesys Experience as a Service"
 theme = "modernize"
