@@ -8,6 +8,7 @@ on:
 
 jobs:
   deploy:
+    if: github.repository.owner == 'teqneticss'
     runs-on: ubuntu-20.04
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
@@ -30,10 +31,3 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{secrets.GENESYS_SAMPLES_SP}}
-          
-      - name: Upload Hugo to Azure Blob
-        uses: azure/CLI@v1
-        with:
-          inlineScript: |
-            az storage blob delete-batch --account-name 'genesysworkshops' --source '$web' --pattern '[!workshops]*'
-            az storage blob upload-batch --account-name 'genesysworkshops' --source ./public --destination '$web'
